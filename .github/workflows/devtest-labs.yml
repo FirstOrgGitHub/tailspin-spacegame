@@ -230,7 +230,7 @@ jobs:
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v1
       with:       
-        manifests: manifests/webdeployments.yml      
+        manifests: manifests/apideployments.yml      
         images: acrmilaha.azurecr.io/leaderboard:${{ steps.date.outputs.date }}.${{ github.run_number }}
         imagepullsecrets: |
           aks-connection-api
