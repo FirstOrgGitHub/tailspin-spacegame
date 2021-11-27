@@ -195,7 +195,7 @@ jobs:
     name: 🚀 Deploy to AKS (API)
     environment: 
       name: aks-cluster
-      url: http://20.86.241.164/
+      #url: http://20.86.241.164/
     runs-on: ubuntu-latest
     needs: tailspin-leaderboards-scan
     steps:
