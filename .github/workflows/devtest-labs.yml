@@ -225,7 +225,7 @@ jobs:
         container-registry-url: acrmilaha.azurecr.io
         container-registry-username: ${{ secrets.ACR_USERNAME }}
         container-registry-password: ${{ secrets.ACR_PASSWORD }}
-        secret-name: aks-connection
+        secret-name: aks-connection-api
         
     - name: Deploy to Kubernetes cluster
       uses: Azure/k8s-deploy@v1
@@ -233,7 +233,7 @@ jobs:
         manifests: manifests/webdeployments.yml      
         images: acrmilaha.azurecr.io/leaderboard:${{ steps.date.outputs.date }}.${{ github.run_number }}
         imagepullsecrets: |
-          aks-connection
+          aks-connection-api
         force: true
 
         
