@@ -164,12 +164,12 @@ jobs:
     - name: Azure Login
       uses: Azure/login@v1
       with:
-        creds: ${{ secrets.AKS_CREDS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
   
     - name: Azure Kubernetes set context
       uses: Azure/aks-set-context@v1
       with:
-        creds: ${{ secrets.AKS_CRED1}}
+        creds: ${{ secrets.AZURE_CREDENTIALS}}
         resource-group: qatargas_rs
         cluster-name: aks-cluster
     
